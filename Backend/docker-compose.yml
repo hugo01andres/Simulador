@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: cuspide
+    ports:
+      - "5432:5432"  # Asegúrate de que el puerto 5432 esté expuesto y mapeado a tu máquina local

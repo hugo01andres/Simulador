@@ -1,0 +1,28 @@
+<div class="mt-5">
+    <h1 style="text-align: center; font-weight: 500; font-size: 60px; margin-right: 90px;">Register</h1>
+</div>
+<div  class="form-register mt-5">
+    <div style="width: 40%;">
+        <mat-form-field class="margin-input example-full-width">
+            <mat-label>Name</mat-label>
+            <input class="form-control" matInput type="text" [formControl]="name" placeholder="name">
+        </mat-form-field>
+        <mat-form-field class="margin-input">
+            <mat-label>Username</mat-label>
+            <input class="form-control" matInput type="text" [formControl]="username" placeholder="Enter  username">
+        </mat-form-field>
+        <mat-form-field class="margin-input example-full-width">
+            <mat-label>Email</mat-label>
+            <input class="form-control" matInput type="email" [formControl]="email" placeholder="Enter email">
+            @if(email.invalid){
+                <mat-error>{{getErrorMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field class="margin-input example-full-width">
+            <mat-label>Password</mat-label>
+            <input class="form-control" matInput type="password" [formControl]="password" placeholder="Enter password">
+        </mat-form-field>
+        <!--Submit-->
+        <button mat-raised-button color="primary" class="btn btn-primary" (click)="register()">Register</button>
+    </div>
+</div>

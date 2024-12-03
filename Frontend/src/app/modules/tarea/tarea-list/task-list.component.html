@@ -1,0 +1,28 @@
+<app-menu/>
+<h2 style="text-align: center; margin-bottom: 6%; font-size: 40px;">Lista de Tareas</h2>
+<div class="container-create-button">
+    <button mat-raised-button color="primary" routerLink="./create">Crear Tarea</button>
+</div>
+<!-- <div *ngIf="mostrarLoader" class="loader">Loading...</div> -->
+<div class="container-table">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of listTasks">
+                <td>{{task.id}}</td>
+                <td>{{task.name}}</td>
+                <button (click)="openDialog('0ms','0ms', task.id)"  mat-mini-fab color="warn" class="my-fab">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-mini-fab color="primary" class="my-fab" (click)="redirectEdit(task.id)">
+                    <mat-icon >edit</mat-icon>
+                </button>    
+            </tr>
+    </table>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Agrega cualquier otro enlace a archivos CSS que necesites -->
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Inicio de Sesión</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+              <label for="username">Usuario:</label>
+              <input type="text" class="form-control" id="username" formControlName="username" name="username" placeholder="Ingrese su usuario" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" class="form-control" id="password" formControlName="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <!--Invalid username or password-->
+            <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password</div>
+            <button type="submit" (click)="login()" class="btn btn-primary btn-block">Login</button>
+          </form>
+          <!--Register-->
+          <div class="text-center mt-3">
+            <p>No account yet? <a [routerLink]="['../register']">Register</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

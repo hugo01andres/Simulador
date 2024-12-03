@@ -1,0 +1,73 @@
+.container-table{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+.container-table table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.container-table th, tr{
+    padding: 10px;
+    border: 1px solid #000;
+}
+.container-table th{
+    background-color: #000;
+    color: #fff;
+}
+.container-table tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+.container-table tbody button{
+    margin: 5px;
+}
+.container-table tbody tr:hover{
+    background-color: #ddd;
+}
+.container-table tbody tr td{
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+.container-create-button{
+    text-align: center;
+    margin: 20px 0;
+
+}
+.my-fab {
+    width: 40px;
+    height: 40px;
+    line-height: 16px;
+
+    .mat-button-wrapper {
+         padding: 2px 0 !important;
+         line-height: 16px !important;
+         width: 16px !important;
+         height: 16px !important;
+
+         .mat-icon {
+              font-size: 90px;
+              padding-right: 4px;
+              line-height: 16px;
+          }
+    }
+}
+.loader {
+    /* Estilos para el loader */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

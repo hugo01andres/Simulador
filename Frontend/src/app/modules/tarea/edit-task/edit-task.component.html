@@ -1,0 +1,17 @@
+<app-menu/>
+<div class="container">
+    <h1 class="text-center">Editar tarea</h1>
+    <form  [formGroup]="taskForm" (ngSubmit)="updateTask()" class="mt-4 text-center">
+      <div style="display: flex; justify-content: center;">
+        <div  class="form-group text-center"  style="width: 40%;">
+            <label for="name">Nombre:</label>
+            <input  type="text" class="form-control col-xs-10 col-sm-2" id="name" placeholder="Ingrese el nombre" formControlName="name">
+          </div>
+      </div>
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" class="btn btn-primary mr-2 m-3">Editar</button>
+        <!-- Botón para cancelar con enlace a la ruta '../' -->
+        <button type="button" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+
+    </form>
+  </div>
