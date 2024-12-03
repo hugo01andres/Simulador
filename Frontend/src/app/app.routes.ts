@@ -23,5 +23,10 @@ export const routes: Routes = [
     {
         path: 'register',
         component: RegisterComponent
+    },
+    {
+        path:'examenpractico',
+        loadChildren: () => import('./modules/examen-practico/examen-practico.routes').then(m => m.examenpracticoRoutes),
+        canActivate: [sessionGuard]
     }
 ];
